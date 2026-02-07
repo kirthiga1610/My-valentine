@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kirthiga ❤️ Lokesh</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  background:radial-gradient(circle at top,#2b000f,#000);
+  color:#fff;
+  text-align:center;
+}
+
+h1{color:#ffb6c1}
+
+.day{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,182,193,0.4);
+  border-radius:20px;
+  margin:20px auto;
+  padding:20px;
+  max-width:900px;
+}
+
+.locked{
+  opacity:0.35;
+  pointer-events:none;
+}
+
+button{
+  background:#ff4d6d;
+  border:none;
+  color:#fff;
+  padding:10px 25px;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.letter{
+  display:none;
+  text-align:left;
+  line-height:1.8;
+  margin-top:15px;
+  animation:fade 1.5s;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation:float 8s linear forwards;
+}
+
+@keyframes float{
+  from{transform:translateY(0);opacity:1}
+  to{transform:translateY(-100vh);opacity:0}
+}
+
+#proposal{
+  display:none;
+  margin:40px;
+  padding:30px;
+  border:2px solid pink;
+  border-radius:25px;
+}
+
+.ring{
+  font-size:60px;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+  100%{transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Valentine’s Week 💖<br>Only for Lokiiii</h1>
+
+<div id="days"></div>
+
+<div id="proposal">
+<div class="ring">💍</div>
+<h2>Will you be mine forever?</h2>
+<button onclick="alert('You just made me the happiest girl alive 💖')">YES</button>
+<button onclick="alert('Wrong answer 😜 Redirecting to YES…')">NO</button>
+</div>
+
+<script>
+const days=[
+ {title:"🌹 Rose Day",date:7,audio:"rose.mp3",text:[
+ "Lokiiii… you entered my life like a rose — soft, silent, powerful.",
+ "You changed my world without even trying.",
+ "Your presence made my heart feel safe.",
+ "I found comfort in you unexpectedly.",
+ "You became my favourite feeling.",
+ "Every thought of you smells like love.",
+ "You calm my storms.",
+ "You colour my days.",
+ "You heal parts of me.",
+ "You make me smile without effort.",
+ "You matter deeply to me.",
+ "I cherish you.",
+ "I adore you.",
+ "I choose you.",
+ "This rose is my heart."
+ ]},
+ {title:"💍 Propose Day",date:8,audio:"propose.mp3",text:[
+ "Lokesh… this is not a question, it’s a truth.",
+ "My heart already belongs to you.",
+ "I see my future holding your hand.",
+ "I feel complete with you.",
+ "You understand me.",
+ "You respect me.",
+ "You accept me.",
+ "You are my choice.",
+ "You are my calm.",
+ "You are my chaos.",
+ "You are my strength.",
+ "You are my home.",
+ "I want you.",
+ "I choose you.",
+ "Forever."
+ ]},
+ {title:"🍫 Chocolate Day",date:9,audio:"choco.mp3",text:[
+ "Lokiiii… you are sweeter than chocolates.",
+ "You melt my bad moods.",
+ "You make life taste better.",
+ "You are addictive in the best way.",
+ "Your laughter is my favourite flavour.",
+ "Your care comforts me.",
+ "You spoil me with love.",
+ "You make moments special.",
+ "You are warmth.",
+ "You are sweetness.",
+ "You are joy.",
+ "You are love.",
+ "I crave you.",
+ "I miss you.",
+ "Always."
+ ]},
+ {title:"🧸 Teddy Day",date:10,audio:"teddy.mp3",text:[
+ "Lokesh… you are my comfort.",
+ "You are my safe place.",
+ "You are my emotional support.",
+ "You calm my fears.",
+ "You hold my heart gently.",
+ "You make me feel protected.",
+ "You understand my silence.",
+ "You stay when things are hard.",
+ "You hug me even from distance.",
+ "You are warmth.",
+ "You are peace.",
+ "You are love.",
+ "I trust you.",
+ "I need you.",
+ "Forever."
+ ]},
+ {title:"🤝 Promise Day",date:11,audio:"promise.mp3",text:[
+ "Lokiiii… I promise honesty.",
+ "I promise effort.",
+ "I promise patience.",
+ "I promise respect.",
+ "I promise love.",
+ "I promise loyalty.",
+ "I promise care.",
+ "I promise growth.",
+ "I promise support.",
+ "I promise understanding.",
+ "I promise commitment.",
+ "I promise forever.",
+ "I promise us.",
+ "I promise always.",
+ "I promise you."
+ ]},
+ {title:"🤗 Hug Day",date:12,audio:"hug.mp3",text:[
+ "Lokesh… this hug holds my soul.",
+ "This hug holds my love.",
+ "This hug holds my care.",
+ "This hug holds my emotions.",
+ "This hug holds my trust.",
+ "This hug is warm.",
+ "This hug is real.",
+ "This hug is deep.",
+ "This hug is safe.",
+ "This hug is yours.",
+ "I miss you.",
+ "I need you.",
+ "I want you.",
+ "Come closer.",
+ "Stay."
+ ]},
+ {title:"💋 Kiss Day",date:13,audio:"kiss.mp3",text:[
+ "Lokiiii… this kiss is gentle.",
+ "This kiss is honest.",
+ "This kiss is loving.",
+ "This kiss is trusting.",
+ "This kiss is slow.",
+ "This kiss is deep.",
+ "This kiss is emotional.",
+ "This kiss is meaningful.",
+ "This kiss is only yours.",
+ "I belong to you.",
+ "You belong to me.",
+ "My heart chose you.",
+ "My soul chose you.",
+ "Always you.",
+ "Forever you."
+ ]},
+ {title:"❤️ Valentine’s Day",date:14,audio:"ovvandrai.mp3",text:[
+ "Lokesh… you are my today.",
+ "You are my tomorrow.",
+ "You are my always.",
+ "You are my person.",
+ "You are my love.",
+ "You are my partner.",
+ "You are my home.",
+ "You are my peace.",
+ "You are my madness.",
+ "You are my happiness.",
+ "I choose you.",
+ "Every lifetime.",
+ "Every universe.",
+ "Every version of me.",
+ "Be mine forever."
+ ]}
+];
+
+const now=new Date();
+const unlockHour=14,unlockMin=30;
+const container=document.getElementById("days");
+
+days.forEach((d,i)=>{
+ const canUnlock=
+  (now.getMonth()===1 && now.getDate()>d.date) ||
+  (now.getMonth()===1 && now.getDate()===d.date &&
+  (now.getHours()>unlockHour ||
+  (now.getHours()===unlockHour && now.getMinutes()>=unlockMin)));
+
+ const div=document.createElement("div");
+ div.className="day"+(canUnlock?"":" locked");
+ div.innerHTML=`<h2>${d.title}</h2>
+ <button onclick="openDay(${i})">Open</button>
+ <div class="letter">${d.text.map(t=>`<p>${t}</p>`).join("")}
+ <audio id="audio${i}" src="${d.audio}"></audio></div>`;
+ container.appendChild(div);
+});
+
+function openDay(i){
+ const day=document.querySelectorAll(".day")[i];
+ day.querySelector(".letter").style.display="block";
+ document.getElementById("audio"+i).play();
+ if(i===7) document.getElementById("proposal").style.display="block";
+}
+
+setInterval(()=>{
+ const h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤️";
+ h.style.left=Math.random()*100+"vw";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),8000);
+},600);
+</script>
+
+</body>
+</html>
