@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kirthiga ❤️ Lokesh</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Georgia, serif;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  text-align:center;
+  overflow-x:hidden;
+}
+
+h1{color:#8b0000;margin:20px}
+
+.container{max-width:850px;margin:auto;padding:20px}
+
+.day{
+  background:#fff;
+  margin:18px 0;
+  padding:20px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
+
+button{
+  padding:10px 22px;
+  background:#d6336c;
+  color:#fff;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.letter{
+  display:none;
+  text-align:left;
+  margin-top:15px;
+  line-height:1.8;
+}
+
+audio{width:100%;margin-top:10px}
+
+/* Floating Hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation:float 8s linear infinite;
+  color:rgba(255,0,100,0.7);
+}
+@keyframes float{
+  from{transform:translateY(0);opacity:1}
+  to{transform:translateY(-100vh);opacity:0}
+}
+
+/* Proposal */
+#proposal{
+  display:none;
+  text-align:center;
+  margin-top:20px;
+  animation:fadeIn 3s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<h1>💖 Valentine’s Week – Only for Lokiiii 💖</h1>
+
+<div class="container">
+
+<div class="day" id="day1">
+<h2>🌹 Rose Day</h2>
+<button onclick="openDay(1)">Open</button>
+<div class="letter">
+<p>My Lokiiii 🤍,
+
+Today is Rose Day, but honestly, no rose can match you.
+A rose has thorns, but loving you has only taught me patience and warmth.
+Every time I smile thinking of you, it feels like a rose blooming inside me.
+You entered my life so softly, yet changed everything so deeply.
+I never knew love could feel calm and powerful at the same time.
+With you, even silence feels meaningful.
+Your presence makes my ordinary days feel special.
+I don’t need grand gestures; your small care is enough for me.
+If love had a color, it would be the shade of comfort you give me.
+I promise to water this love every day with honesty and trust.
+Like a rose that grows slowly, my love for you grew without me noticing.
+Now it’s everywhere — in my thoughts, my dreams, my prayers.
+No matter what life brings, I’ll choose you again and again.
+This rose is not just a flower, it’s my heart in your hands.
+Happy Rose Day, my forever 🌹
+
+— Yours, Kirthiga ❤️</p>
+<audio controls autoplay><source src="rose.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day2">
+<h2>💌 Propose Day</h2>
+<button onclick="openDay(2)">Unlock</button>
+<div class="letter">
+<p>My Love,
+
+If I could go back to the day I met you, I’d still choose you.
+So today, on Propose Day, I want to say this clearly and truly.
+I choose you — not just in happiness, but in every phase of life.
+I choose your flaws, your silence, your dreams, your fears.
+Being with you feels like coming home after a long day.
+You understand me in ways I never explain.
+You support me even when I doubt myself.That itself is love beyond words.
+I don’t promise a perfect life, but I promise a loyal heart.
+I promise to stand beside you, not behind or ahead.
+I want to grow with you, learn with you, fight with you, heal with you.
+You are not just someone I love, you are someone I respect deeply.
+So here I am, with all my heart.
+Will you walk this journey with me?
+Not just today, but forever 💍
+
+— Always yours, Kirthiga 💖</p>
+<audio controls autoplay><source src="propose.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day3">
+<h2>🍫 Chocolate Day</h2>
+<button onclick="openDay(3)">Unlock</button>
+<div class="letter">
+<p>My Sweetest Lokiiii,
+
+They say chocolates are sweet, but they clearly haven’t met you.
+You add sweetness to my life without even trying.
+Every laugh of yours feels like comfort food for my soul.
+When I feel low, just thinking of you lifts me up.
+You’re my stress reliever, my happy thought, my safe place.
+Love with you doesn’t feel heavy — it feels warm and reassuring.
+You never force love; you let it flow naturally.
+That’s what makes you special to me.Like chocolate melts slowly, my heart melts for you every day.
+You don’t just make me happy, you make me feel secure.
+With you, love feels balanced and real.
+I want to share all my sweetness and bitterness only with you.
+Because even bitter moments feel lighter when you’re with me.
+Thank you for being my comfort.
+Happy Chocolate Day, my favorite sweetness 🍫
+
+— Kirthiga 🤎</p>
+<audio controls autoplay><source src="chocolate.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day4">
+<h2>🧸 Teddy Day</h2>
+<button onclick="openDay(4)">Unlock</button>
+<div class="letter">
+<p>My Hug, My Home,
+
+A teddy is something you hold close, and that’s exactly what you are to me.
+You are my emotional support when the world feels too loud.
+Your presence calms my chaos.
+You make me feel protected without even saying a word.
+Whenever I’m tired, I imagine resting in your arms.
+That thought alone gives me strength.
+You don’t judge my moods, you understand them.
+You accept me as I am, and that means everything.
+Love with you feels safe, not scary.
+I don’t fear being myself around you.
+You are my comfort in human form.If I ever feel lost, I know where to come back.
+Holding you feels like holding peace.
+I never want to lose this warmth.
+Happy Teddy Day, my safe place 🧸
+
+— Yours forever, Kirthiga 🤍</p>
+<audio controls autoplay><source src="teddy.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day5">
+<h2>🤝 Promise Day</h2>
+<button onclick="openDay(5)">Unlock</button>
+<div class="letter">
+<p>My Forever Promise,
+
+Today is Promise Day, but my promises to you are not limited to one day.
+I promise to be honest with you, even when it’s hard.
+I promise to respect you in your presence and absence.
+I promise to stand with you during misunderstandings, not walk away.
+I promise to grow, not give up.
+I won’t run from problems; I’ll face them with you.
+I promise to listen, not just hear.
+I promise to choose love over ego.I’ll protect what we have with patience and trust.
+You are not an option to me, you are my priority.
+I promise to value your efforts as much as mine.
+I promise to love you even on days we disagree.
+Because real love is staying, not leaving.
+My heart is tied to you with these promises.
+Happy Promise Day 🤝
+
+— With all my heart, Kirthiga ❤️</p>
+<audio controls autoplay><source src="promise.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day6">
+<h2>🤗 Hug Day</h2>
+<button onclick="openDay(6)">Unlock</button>
+<div class="letter">
+<p>My Warmest Place,
+
+A hug from you feels like everything will be okay.
+It’s not just arms around me, it’s reassurance.
+When you hug me, the world disappears.
+All my worries melt into comfort.
+You make me feel protected without words.
+I feel understood without explanation.
+Your hug gives me strength I didn’t know I needed.
+In your arms, I don’t have to pretend to be strong.
+I can be real, vulnerable, and calm.
+That’s the magic of you.I want to be that comfort for you too.
+Whenever life feels heavy, come to me.
+I’ll hold you just as tight.
+Because love is feeling safe together.
+Happy Hug Day 🤗
+
+— Always yours, Kirthiga 🤍</p>
+<audio controls autoplay><source src="hug.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day7">
+<h2>💋 Kiss Day</h2>
+<button onclick="openDay(7)">Unlock</button>
+<div class="letter">
+<p>My Love,
+
+A kiss is not just lips touching; it’s souls meeting.
+Every kiss I imagine with you is filled with emotion.
+It’s trust, closeness, and affection combined.
+It’s saying “I’m here” without words.
+I don’t crave moments; I crave connection with you.
+I want kisses that speak comfort and reassurance.
+Kisses that say “we’re okay.”
+With you, intimacy feels meaningful, not rushed.
+I want slow moments, real moments, honest moments.
+You make love feel pure and deep.Every kiss with you would carry my heart in it.
+It would say everything I feel but can’t always say.
+You are my chosen person.
+Today and always.
+Happy Kiss Day 💋
+
+— Kirthiga 💖</p>
+<audio controls autoplay><source src="kiss.mp3"></audio>
+</div>
+</div>
+
+<div class="day locked" id="day8">
+<h2>❤️ Valentine’s Day</h2>
+<button onclick="openDay(8)">Open My Heart</button>
+<div class="letter">
+<p>My Lokiiii, My Love, My Future,
+
+Today is Valentine’s Day, but loving you is my everyday choice.
+You are not just my boyfriend; you are my emotional partner.
+With you, love feels steady and real.
+We may not be perfect, but we are honest.
+I want a future where we grow together.
+Where we argue, forgive, and become stronger.
+I want to build memories, not just moments.
+You are my peace in chaos.
+My strength in weakness.
+My smile on hard days.I don’t know what tomorrow holds, but I know who I want beside me.
+That’s you. Always you.
+Thank you for being part of my life.
+Thank you for loving me the way you do.
+Happy Valentine’s Day, my forever ❤️
+
+— Forever yours, Kirthiga 💍</p>
+
+<div id="proposal">
+<h2>💍 Will you be my forever, Lokiiii?</h2>
+<p>— Kirthiga ❤️</p>
+</div>
+
+<audio controls autoplay><source src="valentine.mp3"></audio>
+</div>
+</div>
+
+</div>
+
+<script>
+/* Floating hearts */
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+},500);
+
+/* Date-based unlock (Feb 7–14) */
+const unlockDates={1:7,2:8,3:9,4:10,5:11,6:12,7:13,8:14};
+const today=new Date().getDate();
+
+for(let i=1;i<=8;i++){
+  if(today>=unlockDates[i]){
+    document.getElementById("day"+i).classList.remove("locked");
+  }
+}
+
+/* Order-based unlock */
+function openDay(day){
+  const d=document.getElementById("day"+day);
+  d.querySelector(".letter").style.display="block";
+
+  if(day===8){
+    document.getElementById("proposal").style.display="block";
+  }
+  if(day<8){
+    document.getElementById("day"+(day+1)).classList.remove("locked");
+  }
+}
+</script>
+
+</body>
+</html>
